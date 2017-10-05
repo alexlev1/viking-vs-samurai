@@ -3,7 +3,7 @@ class Samurai < Warrior
   class << self
     def create_samurai
       name = samurai_name
-      health = rand(70..90)
+      health = 85
       strength = nil
       agility = nil
       Samurai.new(name, health, strength, agility)

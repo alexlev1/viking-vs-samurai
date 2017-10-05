@@ -1,5 +1,4 @@
 class Battle
-  @@finish
 
   def self.battle_ground(viking, samurai)
     while true do
@@ -34,14 +33,12 @@ class Battle
     while viking.health > 0 || samurai.health > 0 do
       viking.battle(samurai)
       if samurai.health <= 0
-        puts "The winner is #{viking.name}!"
-        puts "#{samurai.name} is dead!"
+        Content.viking_winner(viking, samurai)
         break
       end
       samurai.battle(viking)
       if viking.health <= 0
-        puts "The winner is #{samurai.name}!"
-        puts "#{viking.name} is dead!"
+        Content.samurai_winner(viking, samurai)
         break
       end
     end
@@ -51,14 +48,12 @@ class Battle
     while viking.health > 0 || samurai.health > 0 do
       samurai.battle(viking)
       if viking.health <= 0
-        puts "The winner is #{samurai.name}!"
-        puts "#{viking.name} is dead!"
+        Content.samurai_winner(viking, samurai)
         break
       end
       viking.battle(samurai)
       if samurai.health <= 0
-        puts "The winner is #{viking.name}!"
-        puts "#{samurai.name} is dead!"
+        Content.viking_winner(viking, samurai)
         break
       end
     end

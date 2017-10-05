@@ -22,11 +22,40 @@ module Content
   end
 
   def self.end_battle
-    puts "You see what a coward you are?"
+    puts "Do you see what a coward you are?"
   end
 
   def self.error_battle
     puts "I don't understand you! Say: 'fight' or 'end'!"
   end
 
+  def self.dodge_fail(enemy, name, health)
+    puts "#{name} is attack to #{enemy.name}"
+    puts "The health of #{enemy.name} is #{enemy.health}"
+    puts "--------------------"
+  end
+
+  def self.dodge_draw(enemy, name, health)
+    puts "#{name} can't make attack to #{enemy.name}"
+    puts "--------------------"
+  end
+
+  def self.dodge_success(enemy, name, health)
+    puts "#{enemy.name} more agile then #{name}"
+    puts "#{enemy.name} make counterattack to #{name}"
+    puts "The health of #{name} is #{health}"
+    puts "--------------------"
+  end
+
+  def self.viking_winner(viking, samurai)
+    puts "--------------------"
+    puts "The winner is #{viking.name}!"
+    puts "#{samurai.name} is dead!"
+  end
+
+  def self.samurai_winner(viking, samurai)
+    puts "The winner is #{samurai.name}!"
+    puts "#{viking.name} is dead!"
+    puts "--------------------"
+  end
 end

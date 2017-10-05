@@ -17,13 +17,30 @@ class Warrior
   private
 
   def take_damage(enemy)
-    @strength = rand(9..15)
-    enemy.health -= @strength
-    puts "Здоровье #{enemy.name} равно #{enemy.health}"
+    name = @name
+    health = @health
+    @dodge = dodge(enemy)
+
+    case @dodge
+    when 1
+      @strength = rand(9..15)
+      enemy.health -= @strength
+      Content.dodge_fail(enemy, name, health)
+    when 0
+      Content.dodge_draw(enemy, name, health)
+    when -1
+      enemy.strength = rand(5..11)
+      @health -= enemy.strength
+      Content.dodge_success(enemy, name, health)
+    end
   end
 
-  def dodge
-    @agility = rand(6..9)
+  private
+
+  def dodge(enemy)
+    @agility = rand(3..8)
+    enemy.agility = rand(1..6)
+    @agility <=> enemy.agility
   end
 
 end

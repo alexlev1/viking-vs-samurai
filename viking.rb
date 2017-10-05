@@ -3,7 +3,7 @@ class Viking < Warrior
   class << self
     def create_viking
       name = viking_name
-      health = rand(80..100)
+      health = 100
       strength = nil
       agility = nil
       Viking.new(name, health, strength, agility)
