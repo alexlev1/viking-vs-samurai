@@ -1,9 +1,8 @@
 class Warrior
-
   attr_accessor :health, :strength, :agility
   attr_reader :name
 
-  def initialize(name, health, strength=nil, agility=nil)
+  def initialize(name, health, strength = nil, agility = nil)
     @name = name
     @health = health
     @strength = strength
@@ -35,12 +34,10 @@ class Warrior
     end
   end
 
-  private
-
   def dodge(enemy)
     @agility = rand(3..8)
     enemy.agility = rand(1..6)
+
     @agility <=> enemy.agility
   end
-
 end

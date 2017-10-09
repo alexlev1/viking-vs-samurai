@@ -8,10 +8,10 @@ viking = Viking.create_viking
 samurai = Samurai.create_samurai
 
 Content.viking_intro
-puts "#{viking.name}!"
+puts "#{viking.name} with #{viking.health} helth!"
 
 Content.samurai_intro
-puts "#{samurai.name}!"
+puts "#{samurai.name} with #{samurai.health} helth!"
 
 Content.fight_start
 

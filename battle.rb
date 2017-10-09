@@ -1,11 +1,11 @@
 class Battle
-
   def self.battle_ground(viking, samurai)
-    while true do
+    loop do
       fight = gets.chomp
+
       case fight
       when "fight"
-        Battle.first_blood(viking, samurai)
+          Battle.first_blood(viking, samurai)
         break
       when "end"
         Content.end_battle
@@ -30,7 +30,7 @@ class Battle
   end
 
   def self.first_blood_viking(viking, samurai)
-    while viking.health > 0 || samurai.health > 0 do
+    while viking.health > 0 || samurai.health > 0
       viking.battle(samurai)
       if samurai.health <= 0
         Content.viking_winner(viking, samurai)
@@ -45,7 +45,7 @@ class Battle
   end
 
   def self.first_blood_samurai(viking, samurai)
-    while viking.health > 0 || samurai.health > 0 do
+    while viking.health > 0 || samurai.health > 0
       samurai.battle(viking)
       if viking.health <= 0
         Content.samurai_winner(viking, samurai)
@@ -58,5 +58,4 @@ class Battle
       end
     end
   end
-
 end

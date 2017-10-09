@@ -1,5 +1,4 @@
 class Viking < Warrior
-
   class << self
     def create_viking
       name = viking_name
@@ -16,5 +15,4 @@ class Viking < Warrior
       'Ulf', 'Floki', 'Leif'].sample
     end
   end
-
 end

@@ -1,5 +1,4 @@
 class Samurai < Warrior
-
   class << self
     def create_samurai
       name = samurai_name
@@ -16,5 +15,4 @@ class Samurai < Warrior
       'Saito', 'Takeda', 'Hosokava'].sample
     end
   end
-
 end
