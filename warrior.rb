@@ -16,8 +16,6 @@ class Warrior
   private
 
   def take_damage(enemy)
-    name = @name
-    health = @health
     @dodge = dodge(enemy)
 
     case @dodge
