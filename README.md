@@ -1,12 +1,17 @@
-For Honor (v 1.0.)
+Игра "Викинги против Самураеев"
+=====================
 
-This contest will show us - Who is the best Warrior in a History!
+Эта консольная игра, которая имитирует битву двух воинов: викинга и самурая.
 
-Viking vs Samurai. Who is strongest?
+Она создаёт двух воинов, с рандомным количеством здоровья и заставляет их "драться друг с другом", пока один из воинов не потеряет всё здоровье.
 
-This is not game. Just experiment. I made it just for fun...
-And because I want to practice in Ruby OOP.
+### Как запустить игру?
 
-For start the programm, enter in "irb": load './main.rb'
+Требования: Linux + ruby версии 2.4.1 и выше
 
-Enjoy!
+1. Скачать репозиторий с игрокой
+
+2. Запустить из терминала игру командой:
+```
+$ ruby main.rb
+```
