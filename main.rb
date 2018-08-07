@@ -1,8 +1,8 @@
-require_relative 'battle'
-require_relative 'warrior'
-require_relative 'samurai'
-require_relative 'viking'
-require_relative 'content'
+require_relative 'lib/battle'
+require_relative 'lib/warrior'
+require_relative 'lib/samurai'
+require_relative 'lib/viking'
+require_relative 'lib/content'
 
 viking = Viking.create_viking
 samurai = Samurai.create_samurai
